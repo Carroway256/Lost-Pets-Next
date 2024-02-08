@@ -2,32 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.welcomeLayout {
+  background-image: url('./../public/backround-main.png');
+  background-size: cover;
+}
+.triangle {
+  background-color: #000000;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  width: 200px;
+  height: 200px;
+  transform: rotate(90deg);
+}
+.triangle p {
+  transform: rotate(270deg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.triangle-animation {
+  transition: transform 3s ease-in-out;
+  transform: translateX(100vw) rotate(90deg);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.about_container {
+  transition: transform 3s ease-in-out;
+  transform: translateX(100vw);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.mainLayout {
+  background-image: url('./../public/navBarBackground.jpg');
+  background-size: contain;
 }
