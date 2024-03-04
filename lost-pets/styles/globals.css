@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.welcomeLayout {
+  background-image: url('./../public/backround-main.png');
+  background-size: cover;
+}
+.triangle {
+  background-color: #000000;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  width: 200px;
+  height: 200px;
+  transform: rotate(90deg);
+}
+.triangle p {
+  transform: rotate(270deg);
+}
+
+.triangle-animation {
+  transition: transform 3s ease-in-out;
+  transform: translateX(100vw) rotate(90deg);
+}
+
+.about_container {
+  transition: transform 3s ease-in-out;
+  transform: translateX(100vw);
+}
+
+.mainLayout {
+  background-image: url('./../public/navBarBackground.jpg');
+  background-size: contain;
+}
